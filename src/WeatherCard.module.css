@@ -14,7 +14,7 @@
     backdrop-filter: blur(5px);
     border-radius: 10px;
 }
-.weather-icon{
+.weatherIcon{
     width: 170px;
     margin-top: 30px ;
 }
@@ -26,6 +26,11 @@
     font-size: 45px;
     font-weight: 400;
     margin-top: -10px;
+}
+.weather h3{
+    font-size: 25px;
+    font-weight: 400;
+    text-transform: capitalize;
 }
 .details{
     display: flex;

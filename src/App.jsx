@@ -8,7 +8,7 @@ import WeatherCard from './WeatherCard';
 
 function App() {
   const [city, setCity] = useState('nagpur')
-  const [weatherData,setWeatherData] = useState({});
+  const [weatherData,setWeatherData] = useState();
   const [isDarkMode, setIsDark] = useState(false);
   const [bgImage, setBbImage] = useState(defaultbg);
 
@@ -37,7 +37,6 @@ function App() {
     }
   }
 
-
   useEffect(() => {
     getallData();
   }, [city])
@@ -57,7 +56,7 @@ function App() {
         {isDarkMode && <DarkScreen />}
         <Navbar />
         <div className={styles.cardContainer}>
-          <WeatherCard />
+          {weatherData && <WeatherCard info={weatherData}/>}
         </div>
       </div>
     </ModeContext.Provider>
